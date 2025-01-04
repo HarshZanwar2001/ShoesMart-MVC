@@ -17,6 +17,12 @@ builder.Services.AddTransient<ICommonRepository<Product>, CommonRepository<Produ
 builder.Services.AddTransient<ICommonRepository<Customer>, CommonRepository<Customer>>();
 builder.Services.AddTransient<ICommonRepository<Cart>, CommonRepository<Cart>>();
 builder.Services.AddTransient<ICommonRepository<CartItem>, CommonRepository<CartItem>>();
+builder.Services.AddTransient<IGenerateCart, GenerateCart>();
+builder.Services.AddSession(configure =>
+{
+    configure.Cookie.HttpOnly = true;
+    configure.Cookie.IsEssential = true;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,9 +35,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
-
 app.UseAuthorization();
 app.UseEndpoints(static endpoints =>
 {

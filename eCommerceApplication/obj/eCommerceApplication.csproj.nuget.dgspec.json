@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\Day-8\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj": {
+    "C:\\Users\\ASUS\\Documents\\Day-8\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Day-8\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj",
         "projectName": "eCommerceApplication",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\Day-8\\eCommerceApplication\\eCommerceApplication\\eCommerceApplication.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\eCommerceApplication\\eCommerceApplication\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\Day-8\\eCommerceApplication\\eCommerceApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +48,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.2, )"
             },

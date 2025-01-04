@@ -1,0 +1,31 @@
+﻿@using eCommerceApplication.Models;
+@model IEnumerable<Category>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Categories List!";
+}
+
+<h1>@ViewBag.PageTitle</h1>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Catgeory Name</th>
+            <th>Catgeory Description</th>
+            <th>Show Products</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Category category in Model)
+        {
+            <tr>
+                <td><span>@category.CategoryName</span></td>
+                <td><span>@category.Description</span></td>
+                <td>
+                    <a class="btn btn-dark" asp-area="Products" asp-controller="Home" asp-action="CategoryWiseProducts" asp-route-id="@category.CategoryId">Show Products</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
